@@ -1,0 +1,30 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: slightly behind Schedule
+
+Number of hours worked since last update: 6 hours
+Number of hours worked on the project thus far: 62 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: I got to a good place with matching the national parks names from both data sets that they will now join together.
+
+
+
+
+Challenges: At this moment I don't think there are any Challenges.
+
+
+Plans / Goals for next week: Begin the exploring the data, and possible ML models to use.
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings.
+
+I was able to report to my sister this week and tell about the progress I have made. 
+
+Other comments: There are still a about 150 park names that I was not able to match with regex. I asked a friend that has experience working with data and 
+a stats professor, Br. Saunders, on his opinions on the amount and the quality of the data if I were to leave these data entrees out of the data set. He said
+that it should be fine since most of the parks that did not match are smaller national park types that I did not recognize, and to add a disclaimer to my report.  

@@ -1,0 +1,25 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: On schedule
+
+Number of hours worked since last update: 6 hours
+Number of hours worked on the project thus far: 6 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: Got pre-aproval for my project and found data to put together to use.
+
+
+Challenges: Finding an efficient way to collect all of the data from the internet. 
+
+
+Plans / Goals for next week: Finish writing the Project Proposal and either write a web scraper or begin collecting the data manually. 
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings. 
+
+
+Other comments: Just a personal comment, I am excited to continue this project and look forward for what I can find from the data I will collect. I will still need to decide on the specifics of packages and other software I will use for this project at the moment. 

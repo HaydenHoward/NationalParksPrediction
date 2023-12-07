@@ -1,0 +1,30 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: slightly behind Schedule
+
+Number of hours worked since last update: 12 hours
+Number of hours worked on the project thus far: 94 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: I made a machine learning model that got a good r squared score that I am okay with.
+I also made all the three main visualizations and and descriptions and written responses to the questions they answered.
+I began to work on some of the stretch requirements, I included the elevation and the size of the park in the dataset.
+
+
+
+Challenges: No big challenges at the moment. 
+
+
+Plans / Goals for next week: Work on two more stretch requirements. The interactive chart most likely will be a map.
+The other stretch requirements is to make it into a website of some kind. This can be done by using a QMD file or I was also looking into using streamlit.
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings.
+
+I was able to report to my sister this week and tell about the progress I have made. 
+
+Other comments: After I make the interactive chart I just need to put everything together into one report. It feels good to be on the end stretch. 

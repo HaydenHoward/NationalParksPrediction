@@ -1,0 +1,19 @@
+"0","Parks <- read_csv(""C:/Users/hayde/Documents/School/Fall2023/CSE499/DataGathering/Data/CleanedNationalParksSpendingWeather.csv"")"
+"2","[1mRows: [22m[34m40452[39m [1mColumns: [22m[34m25[39m"
+"2","[36m──[39m [1mColumn specification[22m [36m──────────────────────────────────────────────────────────[39m
+[1mDelimiter:[22m "",""
+[31mchr[39m  (3): city, postal, Name
+[32mdbl[39m (22): Jobs, latitude, longitude, year, month, elevation, Total_Recreation_..."
+"2","
+[36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
+[36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message."
+"0","annual <- read_csv(""C:/Users/hayde/Documents/School/Fall2023/CSE499/DataGathering/Data/AnnualWeather.csv"")"
+"2","[1mRows: [22m[34m3371[39m [1mColumns: [22m[34m13[39m"
+"2","[36m──[39m [1mColumn specification[22m [36m──────────────────────────────────────────────────────────[39m
+[1mDelimiter:[22m "",""
+[31mchr[39m  (1): Name
+[32mdbl[39m (12): year, Temp_13, Windspeed_13, dew_point_13, adiabatic_saturation_13, ..."
+"2","
+[36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
+[36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message."
+"0","TotalParks <- Parks%>%merge(annual, by = c(""Name"", ""year""))"

@@ -1,0 +1,7 @@
+"0","# whatsupwithyear <- "
+"0","TotalParks%>%"
+"0","  filter(year == 2014)%>%"
+"0","  sum(is.na(TotalParks$Total_Visitor_Spending))"
+"2","Error in FUN(X[[i]], ...) : 
+  only defined on a data frame with all numeric-alike variables
+"

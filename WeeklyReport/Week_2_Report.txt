@@ -1,0 +1,27 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: Behind schedule
+
+Number of hours worked since last update: 6 hours
+Number of hours worked on the project thus far: 12 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: Wrote my proposal document, began researching into how to make a web scrapper. I also emailed the National Parks organization to see if they already have the data in a clean format, but still waiting for a response. 
+
+
+Challenges: Balances other course work to make time to research and begin the project.  
+
+
+Plans / Goals for next week: Make time for the project to make valuable progress. Have a base web scrapper.  
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings.
+
+I only talked to my sister once this week about my project. I felt like I did not make enough progress to check in twice. 
+
+
+Other comments: I know that the time commitment is not as important as producing a quality project. I am usually good at keeping up with course work, should I have my sister who I am having me stay accountable put due dates on my progress so it will be more of a priority. 

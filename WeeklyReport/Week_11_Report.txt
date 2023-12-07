@@ -1,0 +1,27 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: slightly behind Schedule
+
+Number of hours worked since last update: 6 hours
+Number of hours worked on the project thus far: 82 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: I was able to begin to look into machine learning models. I made a quick sequential model to train my data to see if there was anything easy. I found out I need to do some data engineering for the model to show any results. 
+
+
+
+Challenges: Trying to find the right model for the project. 
+
+
+Plans / Goals for next week: finish the analysis, get a model to somewhat works.
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings.
+
+I was able to report to my sister this week and tell about the progress I have made. 
+
+Other comments: With just about two weeks left for the project I need to put forth more effort into the project. I think I will still be able to provide each thing I said in the requirement document. They just may not be the best quality.

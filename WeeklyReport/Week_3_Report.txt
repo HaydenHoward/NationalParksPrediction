@@ -1,0 +1,29 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: Close To Schedule
+
+Number of hours worked since last update: 5 hours
+Number of hours worked on the project thus far: 17 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: Continued researching into how to make a web scrapper. 
+Received an emailed the National Parks organization with the data that is on their site that will be of use to me. 
+Found a method to retrieve information from tables in pdf's.  
+
+
+Challenges: Finding a way to get the data from the tables into a usable format. 
+
+
+Plans / Goals for next week: Find a way to get the data into a usable format and then complete it for each year from 2012 to 2022.   
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings.
+
+I only talked to my sister once this week about my project. I felt like I did not make enough progress to check in twice. 
+
+
+Other comments: I think that using the package  tabula-py should work for me but if I am not able to get the data to a usable format I will need to find another method.  

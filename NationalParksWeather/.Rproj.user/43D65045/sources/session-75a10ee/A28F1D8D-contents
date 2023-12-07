@@ -1,0 +1,187 @@
+---
+title: "National Parks Weather"
+editor: visual
+execute:
+  echo: false
+  keep-md: true
+  warning: false
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+format:
+  html:
+    fig-width: 12
+    fig-height: 6
+    code-line-numbers: true
+---
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(mosaic)
+library(pander)
+library(ggplot2)
+library(ggrepel)
+library(stringr)
+library(dplyr)
+library(rio)
+library(DT)
+library(USAboundaries)
+library(sf)
+library(leaflet)
+```
+
+```{r, warning=FALSE,message=FALSE}
+Parks <- read_csv("C:/Users/hayde/Documents/School/Fall2023/CSE499/DataGathering/Data/JustNationalParksSpendingWeather.csv")
+annual <- read_csv("C:/Users/hayde/Documents/School/Fall2023/CSE499/DataGathering/Data/AnnualWeather.csv")
+
+TotalParks <- Parks%>%merge(annual, by = c("Name", "year"))
+
+PopularParks <- TotalParks%>%
+  filter(Name == c("Zion National Park","Yosemite National Park","Yellowstone National Park","Rocky Mountain National Park","Olympic National Park","Great Smoky Mountains National Park","Grand Teton National Park","Grand Canyon National Park","Glacier National Park","Glacier Bay National Park and Preserve","Denali National Park and Preserve"))
+
+completedParks <- read_csv("C:/Users/hayde/Documents/School/Fall2023/CSE499/DataGathering/Data/CompletedParks.csv")
+  
+sizePark <- completedParks%>%filter(Name == c("Zion National Park","Yosemite National Park","Yellowstone National Park","Rocky Mountain National Park","Olympic National Park","Great Smoky Mountains National Park","Grand Teton National Park","Grand Canyon National Park","Glacier National Park","Glacier Bay National Park and Preserve","Denali National Park and Preserve"))
+```
+
+```{r}
+stats <- PopularParks%>%
+  select(Name, year, Temp_13, Total_Visitor_Spending)
+datatable(stats)
+```
+
+## What parks have seen an increase in temperature?
+
+```{r}
+custom_order <- c("Great Smoky Mountains National Park","Grand Canyon National Park","Zion National Park","Olympic National Park","Yosemite National Park","Rocky Mountain National Park","Glacier National Park","Grand Teton National Park","Yellowstone National Park","Glacier Bay National Park and Preserve","Denali National Park and Preserve")
+ggplot(PopularParks, aes(x=year,y=Temp_13,color=factor(Name, levels = custom_order)))+
+  geom_line(size=2)+
+  geom_point(color="grey1",size=3)+
+  scale_x_continuous(breaks = c(2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022))+
+  labs(
+    title = "Temperature Over The Last Decade For 10 Popular National Parks",
+    x = "Year",
+    y = "Average Temperature in Celsius",
+    color = "National Park Names"
+  )+
+  theme_bw()+
+  theme(
+    plot.title = element_text(hjust=.5)
+  )
+  # facet_wrap(~Name)
+```
+
+It is interesting that the parks don't seem to have a huge change in temperature from ten years ago to now. Each one has it's varying changes throughout the years but they change only a small amount. While there are some parks that have a higher average annual temperature higher now then it was in 2012, the others do not. Glacier Bay National Park and Preserve in 2012 had an average annual temperature of -3.38 while in 2022 it was -1.7.Denali National Park and Preserve in 2012 had an average annual temperature of -4.74 while in 2022 it was -2.2. The rest appear to not have had any dramatic changes.
+
+## Is there a visible correlation between the temperature and annual spending?
+
+```{r}
+ggplot(TotalParks, aes(x=Temp_13,y=Total_Visitor_Spending))+
+  geom_point(aes(color="grey3"),alpha=.1)+
+  geom_point(data=TotalParks,aes(x=max_air_temp_13,y=Total_Visitor_Spending,color="maroon4"),alpha=.1)+
+  geom_point(data=TotalParks, aes(x=min_air_temp_13,y=Total_Visitor_Spending,color="steelblue"),alpha=.1)+
+  facet_wrap(~year)+
+  labs(
+    title = "Temperature at National Parks",
+    x = "Temperature",
+    y = "Total Spent at National Parks (USD)"
+  )+
+  scale_color_manual(values=c("grey3","maroon4", "steelblue"),
+                     labels=c("Average Temperature","Max Temperature", "Min Temperature"))+
+  guides(
+    color = guide_legend(title="Legend"))+
+  theme_bw()+
+  theme(
+    plot.title = element_text(hjust=.5)
+  )
+```
+
+In the chart above each park has three points on the chart.Throughout the years it seems that more parks have had an increase in spending. There doesn't seem to be any correlation between the temperature and the total amount spent at the national parks. As shown in the previous chart there wasn't much change in the temperature in the last decade from most of the parks. It would be difficult in the chart to see that slight change. The increases in profit are unique to each national park.
+
+## What notable parks have the most annual spending?
+
+```{r}
+custom_order2 <- c("Great Smoky Mountains National Park","Grand Canyon National Park","Zion National Park","Grand Teton National Park","Rocky Mountain National Park","Yosemite National Park","Denali National Park and Preserve","Yellowstone National Park","Glacier National Park","Olympic National Park","Glacier Bay National Park and Preserve")
+ggplot(PopularParks, aes(x=year,y=Total_Visitor_Spending,color=factor(Name, levels = custom_order2)))+
+  geom_line(size=1.25)+
+  scale_x_continuous(breaks = c(2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022))+
+  scale_y_continuous(breaks = c(100000,250000,500000,700000,1000000,2000000),labels = c("100,000","250,000","500,000","700,000","1,000,000","2,000,000"))+
+  labs(
+    title = "Total Visitor Spending at Popular National Parks",
+    x = "Year",
+    y = "Total Visitor Spending",
+    color = "National Park Names"
+  )+
+  theme_bw()+
+  theme(
+    plot.title = element_text(hjust=.5)
+  )
+```
+
+Looking at the same ten popular parks from the first chart but the total spent instead of the temperature. There appears to be a slight increase in total spent at the national parks throughout the last decade. The Great Smoky Mountains National Park has had the greatest increase especially after 2020. Many of the parks seem to have a decrease in the total spent on that year. For context that was the first year of Covid. Some parks seem to have restricted their parks in some way or another to have made these decrease as big as it was.
+
+```{r}
+states <- us_states()
+newState <- states%>%
+  filter(state_name != "Alaska",
+         state_name != "Hawaii",
+         state_name != "Puerto Rico")
+
+pal <- colorFactor(
+  palette = c("lightblue3", "lightblue4","steelblue", "steelblue4","blue"),
+  domain = sizePark$Total_Visitor_Spending
+)
+
+leaflet(data = newState)%>%
+  addTiles()%>%
+  addPolylines(data=newState, color="black", weight = 1)%>%
+  addCircleMarkers(data = sizePark,
+                   lng = ~longitude, 
+                   lat = ~latitude,
+                   popup = ~paste("National Park: ", Name,"<br>Total Visitor Spending: ", Total_Visitor_Spending,"<br>Square Area: ", Area),
+                   radius = sizePark$Area/300000,
+                   color = ~pal(Total_Visitor_Spending),
+    fillOpacity = 0.7 )%>%
+  addControl(
+    html = "National Park Size and Total Visitor Spending",
+    position = "topright"
+  )
+```
+This has the ten popular parks that have been looked at before. The dots size is based on the size of the national parks and the darker the blue to more money the park has park made in a year. 
+
+# Total Visitor Spending Prediction
+
+For making the model the data set was filtered down to just the parks weather, year,month, location, size, and elevation. A sequential neural network was used to build the model below is an example of how it looks. 
+
+```         
+model = models.Sequential([
+    layers.Dense(512, activation='relu', input_shape=(X_train.shape[1],)),
+    layers.Dense(300, activation='relu'),
+    layers.Dropout(.25),
+    layers.Dense(100, activation='relu'),
+    layers.Dense(30, activation='relu'),
+    layers.Dense(1, activation='relu')  
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mse'])
+
+# Stop the training when there are 30 epochs without improvement. 
+early_stop = keras.callbacks.EarlyStopping(monitor='val_mse', patience=30)
+
+# Train the model
+history = model.fit(X_train, y_train, epochs=500, batch_size=52, validation_data=(X_test, y_test), callbacks=[early_stop])
+```
+
+The model got an r squared score of 0.97 and a Mean Square Error of 19,402.34. The r squared score tell us how accurate the model is. A score of 1 would be completely accurate so the score of .97 gets within about 97% the correct answer. The mean squared error tells us that each prediction is on average $19,402.34 off from the correct total visitor spending amount. 
+when ran against the holdout set from the parks in the year 2016 it got an r squared score of 0.799 and a mean squared error of 48,158.85.
+
+![model Trainig](ModelTrain.png)
+
+The image above shows the mean square error score for each epoch of training the model did. It shows as it trained it got more accurate and closer to the train error. 
+
+![model accuracy when training](TestAccuracy.png)
+
+The image above shows what the model predicted on the test set made from the data used to train the model. We can see that the predictions are very close to the correct values.
+
+![model accuracy on holdout](HoldoutAccuracy.png)
+
+Similarly to the previous image this shows the predictions and the actual values. The data for this was a holdout data set made from the parks when the year was 2016. This also means that all the parks with this year was not used to train the model. 

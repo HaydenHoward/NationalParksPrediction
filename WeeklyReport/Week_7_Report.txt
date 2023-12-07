@@ -1,0 +1,27 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: On Schedule
+
+Number of hours worked since last update: 16 hours
+Number of hours worked on the project thus far: 56 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: I found data to use to get the weather data for the project. I began joining and cleaning the data sets.  
+
+
+
+Challenges: I just need to fix the names of the national park unit and names in the last of the data sets to join the annual spending with the weather.
+
+
+Plans / Goals for next week: Finish joining and cleaning the datasets. Begin working on the different parts of the data analysis. 
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings.
+
+I was able to report to my sister this week and tell about the progress I have made. 
+
+Other comments: I think I have it figured out how to fix the names on the parks. On one data set parts of the names are abbreviated and i have gone through and found what to replace the abbreviations with, but there are some addition letters and symbols attached a to some of the parks that may take a bit more effort to solve.

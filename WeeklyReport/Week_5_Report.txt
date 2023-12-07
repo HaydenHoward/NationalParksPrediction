@@ -1,0 +1,31 @@
+Name: Hayden Howard
+Project Title: Annual Spending at National Parks based on weather
+
+Team Members: Hayden Howard
+
+
+Overall Status: Behind Schedule
+
+Number of hours worked since last update: 6 hours
+Number of hours worked on the project thus far: 31 hours
+Total number of hours anticipated for completion:120 hours
+
+Accomplishments: Read the PDF files and was able to get the data from them. Finished organizing the parks reports into csv per year.
+I began looking into different ways to get the weather data. 
+
+
+
+Challenges: I ran into an issue using the NOAA website to get the weather data. 
+
+
+Plans / Goals for next week: Schedule more time for the project. Look into if I will still be able to use NOAA to get the weather data needed.
+Use a web scrapper possibly to get this done. 
+
+
+Accountability plan: (What is your plan to keep yourself honest and follow through with the goals that you have outlined?) I plan to report to my sister twice a week at the beginning and at the end to help talk through the processes I can try and report my findings.
+
+I only talked to my sister once this week about my project. I was able to tell her what I had done and was planning to. She asked me if I was on schedule and was able to bounce a few ideas to her. 
+
+Other comments: While I feel like I am behind schedule I only have one more "difficult" part left. The rest of the project 
+should just be manipulate the data and trying to build a model for it. I have two weeks left before the requirement document is due so 
+hopefully I will be able to complete this part before then to have a better understanding of what I will be able to do. 
